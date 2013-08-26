@@ -10,7 +10,7 @@
    
   toc.init = function(options){
     
-    var content = document.querySelector('body'),
+    var content = document.querySelector(options.content),
         targets = content.querySelectorAll(options.target),
         ul = document.createElement('ul');
             
