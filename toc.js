@@ -13,7 +13,7 @@
     var content = document.querySelector(options.content),
         targets = content.querySelectorAll(options.target),
         ul = document.createElement('ul');
-            
+
     for(var i = 0; i< targets.length; i++){
        var li = document.createElement('li'),
            id = targets[i].getAttribute('id') ||
@@ -29,7 +29,7 @@
       ul.appendChild(li);                
     }
     
-    document.body.insertBefore(ul, document.body.firstChild);
+    content.insertBefore(ul, document.body.firstChild);
   }
 
   return window.toc = toc;
