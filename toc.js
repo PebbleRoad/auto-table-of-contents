@@ -3,6 +3,18 @@
   'use strict'
   
   var toc = {};
+
+  /**
+   * Shims
+   */
+  
+  function getTextContent(elem) {
+    if ((elem.textContent) && (typeof (elem.textContent) != "undefined")) {
+        return elem.textContent;
+    } else {
+        return elem.innerText;
+    }
+  }
   
   /*
    * Initialize Table of Contents
@@ -16,8 +28,7 @@
 
     for(var i = 0; i< targets.length; i++){
        var li = document.createElement('li'),
-           id = targets[i].getAttribute('id') ||
-                targets[i].textContent.replace(/[^a-z0-9]+/ig, "-"),
+           id = targets[i].getAttribute('id') || getTextContent(targets[i]).replace(/[^a-z0-9]+/ig, "-"),
            text = targets[i].innerHTML,
            anchor = document.createElement('a');
            anchor.setAttribute('href','#'+id);    
