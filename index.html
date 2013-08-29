@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
+    <style>
+    body{
+        width: 80%;
+        margin: 0 auto;
+    }
+    </style>
+    <script type="text/javascript" src="toc.js"></script>
+    <script type="text/javascript">
+      
+      function addEvent(element, evnt, funct){
+        if (!window.addEventListener)
+         return element.attachEvent('on'+evnt, funct);
+        else
+         return element.addEventListener(evnt, funct, false);
+      }
+
+      window.onload= function(){            
+          
+          addEvent(document.getElementsByTagName('button')[0], 'click', function(){
+              new Toc({
+                target: 'h2',
+                content: '.content',
+                depth: 6
+              });
+          });
+      }
+            
+    </script>
+  </head>
+  <body>
+    
+    <p><button>Enable Table of Contents</button></p>
+    
+    <div class="content">
+
+      <h2>Introduction with space</h2>
+
+      <p>Metadata is defined as "data about data". In data systems, the metadata describes the data resources and how they are structured. In other information systems such as content and document management systems, metadata describes the structure, content, and management rules associated with the content or documents. Typical metadata for a document might be 'author', 'title', 'subject', 'date of publication' and 'security classification'.</p>
+  
+      <h3>Child heading</h3>
+
+      <p>Metadata is important in enterprise settings. If you have a common metadata framework across all your systems, using common controlled vocabularies, and if metadata is consistently and reliably applied to your information and data assets, it can:</p>
+  
+      <h4>Child heading heading</h4>
+
+      <ul>
+      <li>connect information and data from different systems</li>
+      <li>help find and retrieve information more efficiently and effectively</li>
+      <li>help better manage the information lifecycle (including the delicate balance between accessibility and security)</li>
+      <li>support coordination and collaboration from a common information base</li>
+      <li>build a sense of shared purpose</li>
+      </ul>
+
+      <p>The challenge is to get complete, accurate and consistent metadata applied to information and data resources.</p>
+
+      <p>Metadata can be collected in many ways—from the information environment, work activities and from people. The problem arises when metadata that could be effectively collected from the environment is delegated to be collected from people. People who are in the middle of work tasks do not see direct benefits from completing numerous metadata fields. When coerced into doing unnatural things, they usually revolt or find workarounds thereby undermining the entire initiative.</p>
+
+      <h2>Principles</h2>
+
+      <p>In the course of our work with large enterprises we have found the following principles can be used to set the baseline for the conversation on collection strategies.</p>
+
+      <h3>Collect (and expose) only what is required</h3>
+
+      <p>Not all metadata is required all of the time. For example, in an organisation that deals with different industries, metadata for industry coverage may only be relevant to the externally facing departments, not support functions like Human Resources. Similarly, if documents are only meant for personal use or for use within a small team, they will require only basic metadata. Generally speaking, the need for additional metadata grows as the need to expose the document to different audiences grows.</p>
+
+      <h3>Collect incrementally</h3>
+  
+
+      <p>You don't have to collect all metadata at one time. For example, documents start out private to the individual and when ready it is shared with the team or the entire organization. The private document requires little metadata and all of it can be collected automatically. But when the document becomes sharable it needs additional metadata allowing it to be found and used. It is best to collect metadata required for a sharable document when the status of the document is changed from ‘private’ to ‘sharable’. It would be annoying if all of the metadata is collected when the document is still in the ‘private’ state. Metadata is only added as needed.</p>
+
+      <h2>Strategies</h2>
+
+      <p>Here are some metadata collection strategies that can help in collecting complete, accurate and consistent metadata.</p>
+
+      <h3>System-assigned values</h3>
+
+      <p>A lot can be inferred in an enterprise setting. For example, an enterprise system will likely know the following:</p>
+
+      <ul>
+      <li>Name and ID of user</li>
+      <li>Department, e.g. Sales</li>
+      <li>Geographic location, e.g. Singapore</li>
+      <li>Job function, e.g. Business Development</li>
+      <li>Such information can be automatically supplied by the information system in place.</li>
+      </ul>
+
+      <p>At times, however, it is not possible to predict the actual values such as the actual author of the document. The person authoring the document may be the secretary or someone helping out the actual author. In such cases the author field should default to the currently logged in user, but the field should be editable. This makes it easy to change the author field in those few instances when such an action is required.</p>
+
+      <h3>Document templates</h3>
+
+      <p>Document templates are pre-structured documents used for common documentation tasks. For example, a 'minutes of meeting' document template helps staff to quickly write up the minutes of a meeting using a pre-structured template. Metadata values can be pre-assigned to document templates. Subject topics that help people search for the document (such as document type) are very easy to predict in templates. Some business activity subject topics may also be predictable from the template - e.g. a press release template could be assigned a 'corporate communications' topic. This way when staff use a template the relevant metadata is already applied to it, and the burden of assigning metadata values is reduced.</p>
+
+      <p>Similarly, within very clearly defined process flows, the 'parent' templates for that activity can be set up at the start, and the metadata properties for the activity, and the workgroups responsible, can be inherited for all the subsequent 'child' templates.</p>
+
+      <h3>Document locations</h3>
+
+      <p>Many information and document management systems offer a drag-and-drop functionality enabling staff to drop a document to a specific location (folder or library). The specific folder or library can be pre-assigned with relevant metadata (e.g. subject topics) and then applied to all documents filed there.</p>
+
+      <h3>Business rules</h3>
+
+      <p>The selection of some metadata values may imply the use of other values. These need to be specified as business rules. For example, if a metadata value, 'document type', is specified as 'budget', then another metadata option, 'business activity', can be assigned to 'financial management' using a business rule.</p>
+
+      <h3>Tag bundles</h3>
+
+      <p>Some people have very specific job functions. In such cases the metadata they supply is often in the same combinations. Tag bundles are an easy way to pre-assign relevant metadata values as commonly occurring bundles. For example, a staff member may work consistently with specific organisations and document types. Instead of applying individual metadata values again and again she can set up a tag bundle with the common organisation names and the document types (and maybe topics) that she uses. In future, assigning the bundle applies all the values in one go!</p>
+
+      <h3>Automatic collection</h3>
+
+      <p>Auto-classifiers have been around for some time now. They are still not accurate. But they are getting better! Solutions of this type work by analyzing information and then using natural language processing algorithms to extract entities that can then be mapped to metadata values. These systems work better with metadata values that describe specific entities (such as locations, organisations, people, things). They do not work so well with more abstract entities such as concepts or activities, where the language describing them can be much more variable, and not so easy to identify automatically. The only advice here is to do a proof of concept before purchasing such systems.</p>
+
+      <h2>Conclusion</h2>
+
+      <p>Having complete, accurate and consistent metadata is essential to any information system. Collection of metadata therefore becomes crucial and having the right set of strategies in place can make all the difference between an effective system and one that is a glorified file store. People can be ingenious at avoiding onerous metadata assignment tasks, especially if they are repetitive and not apparently related to the task at hand. People also see different aspects to a document that to them are relevant but may not be to others, and this leads to problems of consistency. Smart design of systems and the way metadata is collected, using the principles and strategies above, can mitigate the burden on people, and improve consistency and quality of metadata.</p>
+    
+    </div>
+  </body>
+</html>
