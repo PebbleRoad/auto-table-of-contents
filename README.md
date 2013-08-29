@@ -1,4 +1,4 @@
-# Auto Table of Contents
+# Auto Table of Contents (heirarchical)
 
 ### Demo
 
@@ -21,8 +21,9 @@ If you have long content pages on your website then you need to make it easy for
 		 window.onload = function(){
 
 			toc.init({
-			'target': 'h2', 	/* Header element: h1|h2|h3|h4|h5|h6 */
-			'content': 'body' 	/* Section to crawl to generate toc: .class| #id */
+			  target: 'h2', 	/* Header element: h1|h2|h3|h4|h5|h6 */
+			  content: 'body' 	/* Section to crawl to generate toc: .class| #id */,
+			  depth: 6    /* How deep should the heading be nested */
 			});
 
 		 };
