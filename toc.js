@@ -85,6 +85,7 @@
         element.setAttribute("id", id);
         
         /* Build UL */
+        console.log(tagNumber, previous);
         
         switch(true){
           case (tagNumber > previous):
@@ -115,7 +116,7 @@
         tagNumber--;
       }
 
-      var fhtml = document.createElement('div');
+      var fhtml = document.createElement('ul');
       fhtml.className = this.options.klass;
       fhtml.innerHTML = html;
       
