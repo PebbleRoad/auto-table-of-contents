@@ -84,8 +84,7 @@
         id = element.getAttribute('id') || txt.replace(/[^a-z0-9]+/ig, "-");        
         element.setAttribute("id", id);
         
-        /* Build UL */
-        console.log(tagNumber, previous);
+        /* Build UL */        
         
         switch(true){
           case (tagNumber > previous):
