@@ -1,5 +1,7 @@
 # Auto Table of Contents (hierarchical)
 
+[![Join the chat at https://gitter.im/PebbleRoad/auto-table-of-contents](https://badges.gitter.im/PebbleRoad/auto-table-of-contents.svg)](https://gitter.im/PebbleRoad/auto-table-of-contents?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### Demo
 
 [http://pebbleroad.github.io/javascript-table-of-contents/](http://pebbleroad.github.io/javascript-table-of-contents/)
